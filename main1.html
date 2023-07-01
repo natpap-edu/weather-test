@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather Data</title>
+  <script src="script3.js"></script>
+  <meta charset="UTF-8">
+  <style>
+  .fix{
+    position:fixed;
+    bottom:0px;
+    right:65%;
+   }
+  .img1 {
+    height: 553px;
+    object-fit: cover;
+    border-radius:10%;
+	border-color:blue;
+	border-width:6px;
+	border-style:outset;
+  }
+  </style>
+  
+</head>
+<body style="font-family:Verdana;background-color:#e6ffff">
+<i><h3 id="displayDateTime" style="font-family:Verdana;text-align:right"></h3></i>
+<table>
+<tr>
+  <td><img src="img2.png" class="img1"></td>
+  <td style="width:2%;"></td> 
+  <td id="weather-data"></td>
+</tr>
+</table>
+
+  <img src="espa.jpg" style="width:35%;" class="fix">
+  
+  
+  
+
+</body>
+ <script type="text/javascript">
+  var today = new Date();
+  var day = today.getDay();
+  var daylist = ["Κυριακή","Δευτέρα","Τρίτη","Τετάρτη ","Πέμπτη","Παρασκευή","Σάββατο"];
+  var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+  var dateTime = date;
+   
+  document.getElementById("displayDateTime").innerHTML = daylist[day]+', '+dateTime;
+ 
+  </script>
+</html>
